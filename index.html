@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Younghee kwon</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.JPG') no-repeat right center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }       
+        .logo:hover {
+            content: url('logo_1.png');
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+        .buttons button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 30px;
+            padding: 10px;
+        }
+        .buttons button:hover {
+            color: #1c1c1c;
+            text-decoration: none;
+        }
+    
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .buttons {
+                flex-wrap: wrap;
+                gap: 5px;
+                justify-content: flex-end;
+            }
+            .buttons button {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo" class="logo">
+        </a>
+        <div class="buttons">
+            <a href="profile.html"><button>PROFILE</button></a>
+            <a href="soloexhibition.html"><button>SOlO EXHIBITION</button></a>
+            <a href="groupexhibition.html"><button>GROUP EXHIBITION</button></a>
+            <a href="sketch.html"><button>SKETCH</button></a>
+        </div>
+    </div>
+</body>
+</html>

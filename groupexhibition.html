@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Younghee Kwon</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-attachment: fixed;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        .logo:hover {
+            content: url('logo_1.png');
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+            flex-wrap: wrap;
+        }
+        .buttons button {
+            background: none;
+            border: none;
+            color: #1c1c1c;
+            cursor: pointer;
+            font-size: 30px;
+            padding: 10px;
+        }
+        .buttons button:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .buttons {
+                justify-content: flex-end;
+                width: 100%;
+            }
+            .buttons button {
+                font-size: 20px;
+                padding: 5px;
+            }
+        }
+        .slider-container {
+            margin: 20px auto;
+            max-width: 1200px;
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+        .slide-caption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .slider-title {
+            text-align: center;
+            position: relative;
+            color: rgb(20, 20, 20);
+            font-size: 24px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .navigation button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .navigation button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .slider-container:hover .navigation button {
+            display: block;
+        }
+        .navigation button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo" class="logo">
+        </a>
+        <div class="buttons">
+            <a href="profile.html"><button>PROFILE</button></a>
+            <a href="soloexhibition.html"><button>SOlO EXHIBITION</button></a>
+            <a href="groupexhibition.html"><button>GROUP EXHIBITION</button></a>
+            <a href="sketch.html"><button>SKETCH</button></a>
+        </div>
+    </div>
+    <div class="slider-container">
+        <div class="slider-title">2025 예끼아트페어</div>
+        <div class="slider" id="slider1">
+            <div class="slide">
+                <img src="artfair/image_1.png" alt="Image 1">
+                <div class="slide-caption">2025 예끼아트페어 9/5 ~ 9/7</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_2.png" alt="Image 2">
+                <div class="slide-caption">1</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_3.png" alt="Image 3">
+                <div class="slide-caption">2</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_4.png" alt="Image 4">
+                <div class="slide-caption">3</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_5.png" alt="Image 5">
+                <div class="slide-caption">4</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_6.png" alt="Image 6">
+                <div class="slide-caption">5</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_7.png" alt="Image 7">
+                <div class="slide-caption">6</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_8.png" alt="Image 8">
+                <div class="slide-caption">7</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_9.png" alt="Image 9">
+                <div class="slide-caption">8</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_10.png" alt="Image 10">
+                <div class="slide-caption">9</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_11.png" alt="Image 11">
+                <div class="slide-caption">10</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_12.png" alt="Image 12">
+                <div class="slide-caption">11</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_13.png" alt="Image 13">
+                <div class="slide-caption">12</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_14.png" alt="Image 14">
+                <div class="slide-caption">13</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_15.png" alt="Image 15">
+                <div class="slide-caption">14</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_16.png" alt="Image 16">
+                <div class="slide-caption">15</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_17.png" alt="Image 17">
+                <div class="slide-caption">16</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_18.png" alt="Image 18">
+                <div class="slide-caption">17</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_19.png" alt="Image 19">
+                <div class="slide-caption">18</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_20.png" alt="Image 20">
+                <div class="slide-caption">19</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_21.png" alt="Image 21">
+                <div class="slide-caption">20</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_22.png" alt="Image 22">
+                <div class="slide-caption">21</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_23.png" alt="Image 23">
+                <div class="slide-caption">22</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_24.png" alt="Image 24">
+                <div class="slide-caption">23</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_25.png" alt="Image 25">
+                <div class="slide-caption">24</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_26.png" alt="Image 26">
+                <div class="slide-caption">25</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_27.png" alt="Image 27">
+                <div class="slide-caption">26</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_28.png" alt="Image 28">
+                <div class="slide-caption">27</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_29.png" alt="Image 29">
+                <div class="slide-caption">28</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_30.png" alt="Image 30">
+                <div class="slide-caption">29</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_31.png" alt="Image 31">
+                <div class="slide-caption">30</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_32.png" alt="Image 32">
+                <div class="slide-caption">31</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_33.png" alt="Image 33">
+                <div class="slide-caption">32</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_34.png" alt="Image 34">
+                <div class="slide-caption">33</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_35.png" alt="Image 35">
+                <div class="slide-caption">34</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_36.png" alt="Image 36">
+                <div class="slide-caption">35</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_37.png" alt="Image 37">
+                <div class="slide-caption">36</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_38.png" alt="Image 38">
+                <div class="slide-caption">37</div>
+            </div>
+            <div class="slide">
+                <img src="artfair/image_39.png" alt="Image 39">
+                <div class="slide-caption">38</div>
+            </div>
+            <!-- Add up to 20 images -->
+        </div>
+        <div class="navigation">
+            <button onclick="prevSlide('slider1')">❮</button>
+            <button onclick="nextSlide('slider1')">❯</button>
+        </div>
+    </div>
+    <div class="slider-container">
+        <div class="slider-title">2024 산으로 가는 배</div>
+        <div class="slider" id="slider1">
+            <div class="slide">
+                <img src="2024Theboat/image_1.png" alt="Image 1">
+                <div class="slide-caption">2024 산으로 가는 배 07.02 ~ 07.28</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_2.png" alt="Image 2">
+                <div class="slide-caption">1</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_3.png" alt="Image 3">
+                <div class="slide-caption">2</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_4.png" alt="Image 4">
+                <div class="slide-caption">3</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_5.png" alt="Image 5">
+                <div class="slide-caption">4</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_6.png" alt="Image 6">
+                <div class="slide-caption">5</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_7.png" alt="Image 7">
+                <div class="slide-caption">6</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_8.png" alt="Image 8">
+                <div class="slide-caption">7</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_9.png" alt="Image 9">
+                <div class="slide-caption">8</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_10.png" alt="Image 10">
+                <div class="slide-caption">9</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_11.png" alt="Image 11">
+                <div class="slide-caption">10</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_12.png" alt="Image 12">
+                <div class="slide-caption">11</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_13.png" alt="Image 13">
+                <div class="slide-caption">12</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_14.png" alt="Image 14">
+                <div class="slide-caption">13</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_15.png" alt="Image 15">
+                <div class="slide-caption">14</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_16.png" alt="Image 16">
+                <div class="slide-caption">15</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_17.png" alt="Image 17">
+                <div class="slide-caption">16</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_18.png" alt="Image 18">
+                <div class="slide-caption">17</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_19.png" alt="Image 19">
+                <div class="slide-caption">18</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_20.png" alt="Image 20">
+                <div class="slide-caption">19</div>
+            </div>
+            <div class="slide">
+                <img src="2024Theboat/image_21.png" alt="Image 21">
+                <div class="slide-caption">20</div>
+            </div>
+            <!-- Add up to 20 images -->
+        </div>
+        <div class="navigation">
+            <button onclick="prevSlide('slider1')">❮</button>
+            <button onclick="nextSlide('slider1')">❯</button>
+        </div>
+    </div>
+    <script>
+        function nextSlide(sliderId) {
+            const slider = document.getElementById(sliderId);
+            slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
+        }
+        function prevSlide(sliderId) {
+            const slider = document.getElementById(sliderId);
+            slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
+        }
+    </script>
+</body>
+<body>
+
+</body>
+</html>

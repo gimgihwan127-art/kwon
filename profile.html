@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Younghee kwon</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('profilebackground.jpeg') no-repeat right center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            transition: 0.3s ease-in-out;
+        }
+        .logo:hover {
+            content: url('logo_1.png');
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .buttons button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 30px;
+            padding: 10px;
+        }
+        .buttons button:hover {
+            color: #1c1c1c;
+            text-decoration: none;
+        }
+        .intro {
+            position: absolute;
+            top: 20%;
+            right: 20px;
+            margin: 0;
+            padding: 30px;
+            color: #1c1c1c;
+            max-width: 400px;
+            text-align: left;
+        }
+        .intro h1 {
+            margin: 0;
+            font-size: 25px;
+            color: #1c1c1c;
+        }
+        .intro p {
+            margin: 5px 0 0;
+            font-size: 15px;
+            color: #1c1c1c;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .buttons {
+                flex-wrap: wrap;
+                gap: 5px;
+                justify-content: flex-end;
+            }
+            .buttons button {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+            .intro {
+                left: 10px;
+                right: 10px;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo" class="logo">
+        </a>
+        <div class="buttons">
+            <a href="profile.html"><button>PROFILE</button></a>
+            <a href="soloexhibition.html"><button>SOlO EXHIBITION</button></a>
+            <a href="groupexhibition.html"><button>GROUP EXHIBITION</button></a>
+            <a href="sketch.html"><button>SKETCH</button></a>
+        </div>
+    </div>
+    <div class="intro">
+        <h1>권영희 (younghee,kwon)</h1>
+        <br><br>
+        <p> 홍익대학교 미술대학 도예과 졸 </p>
+        <p> 홍익대학교 산업미술대학원 제품디자인 졸 </p>
+        <p> 서울신문사 13회 현대도예공모전 특선 </p>
+        <p> 개인전 3회 외 다수의 국내외 그룹전 </p>
+        <p> 현재 선화예고 강사, [OLIVER ; ceramic studio]운영 </p>
+
+        <p> 개인전 전시이력 (초대전 및 기획전) </p>
+
+        <p> 1회 1998년  [pot made of color] 토도랑(인사동, 서울) </p>
+        <p> 2회 2023년  [pottery poetry - said the acorn] 포켓테일즈(을지로3가, 서울) </p>
+        <p> 3회 2024년  [ 작은 숨고르기 ] 공간지은(풍성로22, 서울) </p>
+        <br><br>
+        <p> Hongik University College of Art(BFA)</p>
+        <p> Hongik University Graduate School of Industrial Arts(MFA) </p>
+        <p> Seoul Newspaper's 13th contemporary ceramic competition  </p>
+        <p>  : awarded a special prize </p>
+        <p> 3 individual exhibitions and a number of domestic and international group exhibitions </p>
+        <p> Current ; arthighscool instructor, <OLIVER ; ceramicstudio> creative designer </p>
+            
+    </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Younghee Kwon</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-attachment: fixed;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+        }
+        .logo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+        .logo:hover {
+            content: url('logo_1.png');
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+            flex-wrap: wrap;
+        }
+        .buttons button {
+            background: none;
+            border: none;
+            color: #1c1c1c;
+            cursor: pointer;
+            font-size: 30px;
+            padding: 10px;
+        }
+        .buttons button:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .buttons {
+                justify-content: flex-end;
+                width: 100%;
+            }
+            .buttons button {
+                font-size: 20px;
+                padding: 5px;
+            }
+        }
+        .slider-container {
+            margin: 20px auto;
+            max-width: 1200px;
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+        .slide-caption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .slider-title {
+            text-align: center;
+            position: relative;
+            color: rgb(20, 20, 20);
+            font-size: 24px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .navigation button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .navigation button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .slider-container:hover .navigation button {
+            display: block;
+        }
+        .navigation button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo" class="logo">
+        </a>
+        <div class="buttons">
+            <a href="profile.html"><button>PROFILE</button></a>
+            <a href="soloexhibition.html"><button>SOlO EXHIBITION</button></a>
+            <a href="groupexhibition.html"><button>GROUP EXHIBITION</button></a>
+            <a href="sketch.html"><button>SKETCH</button></a>
+        </div>
+    </div>
+    <div class="slider-container">
+        <div class="slider-title">Sketch</div>
+        <div class="slider" id="slider1">
+            <div class="slide">
+                <img src="Sketch/image_1.png" alt="Image 1">
+                <div class="slide-caption">1</div>
+            </div>
+            <div class="slide">
+                <img src="Sketch/image_2.png" alt="Image 2">
+                <div class="slide-caption">2</div>
+            </div>
+            <div class="slide">
+                <img src="Sketch/image_3.png" alt="Image 3">
+                <div class="slide-caption">3</div>
+            </div>
+            <!-- Add up to 20 images -->
+        </div>
+        <div class="navigation">
+            <button onclick="prevSlide('slider1')">❮</button>
+            <button onclick="nextSlide('slider1')">❯</button>
+        </div>
+    </div>
+    
+    <script>
+        function nextSlide(sliderId) {
+            const slider = document.getElementById(sliderId);
+            slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
+        }
+        function prevSlide(sliderId) {
+            const slider = document.getElementById(sliderId);
+            slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
+        }
+    </script>
+</body>
+<body>
+
+</body>
+</html>
